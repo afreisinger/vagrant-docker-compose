@@ -69,7 +69,9 @@ Vagrant.configure("2") do |config|
   config.vagrant.plugins = "vagrant-docker-compose"
 
   config.vm.provision :docker
+  #yml: "/vagrant/docker-compose.yml", rebuild: true, run: "always" is not mandatory.
   config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: true, run: "always"
+  
 end
 ```
 
