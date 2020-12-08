@@ -12,7 +12,6 @@ A Vagrant provisioner for [Docker Compose](https://docs.docker.com/compose/). In
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   config.vagrant.plugins = "vagrant-docker-compose"
-    
   config.vm.provision :docker
   config.vm.provision :docker_compose
 end
